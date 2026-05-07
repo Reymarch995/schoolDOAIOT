@@ -8,19 +8,15 @@ def calculate_bmi(height, weight) -> float:
         bmi = weight / (math.pow(height, 2))
 
         print("BMI = " + str(bmi))
-        return bmi
+        
+        if(bmi < 18.5):
+            print("ur underweight")
+            return -1
+        elif(18.5 < bmi < 25.0):
+            print("ur normal weight")
+            return 0
+        elif(bmi > 25.0):
+            print("ur overweight")
+            return 1
     except Exception as e:
         print("uhoh! ran into error: " + e)
-def bmiRange(bmi: float) -> null:
-    if(bmi < 18.5):
-        print("ur underweight")
-        return -1
-    elif(18.5 < bmi < 25.0):
-        print("ur normal weight")
-        return 0
-    elif(bmi > 25.0):
-        print("ur overweight")
-        return 1
-
-bmi = calculate_bmi(height=1.73,weight=37)
-bmiRange(bmi)
