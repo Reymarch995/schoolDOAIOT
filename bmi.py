@@ -14,11 +14,12 @@ def calculate_bmi(height, weight) -> float:
 def bmiRange(bmi: float) -> null:
     if(bmi < 18.5):
         print("ur underweight")
+        return -1
     elif(18.5 < bmi < 25.0):
         print("ur normal weight")
+        return 0
     elif(bmi > 25.0):
         print("ur overweight")
-    else:
         return 1
 
 bmi = calculate_bmi(height=1.73,weight=37)
